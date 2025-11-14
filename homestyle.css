@@ -1,0 +1,445 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+body {
+     font-family: 'Inter', sans-serif;
+    background: #fffefe;
+    color: #222;
+}
+
+/* HEADER */
+header {
+    background: rgb(250, 248, 248);
+    padding: 13px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box {
+    width: 28px;
+    height: 28px;
+    background: #0b8041;
+    border-radius: 6px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+/* Highlight hover for nav links */
+nav a:hover {
+    color: #101111;      /* Turns green on hover */
+    font-weight: 500;
+}
+
+/* Highlight hover for Sign In button */
+.sign-in:hover {
+    background: #0b8041; /* Darker green shade */
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+nav a {  
+    color: rgb(156, 152, 152);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav button {
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-in {
+    background: rgb(255, 253, 253);
+    color: rgb(2, 2, 2);
+}
+
+.get-started {
+    background: #0b8041;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.tag {
+    font-family:'Inter',  sans-serif;
+    background: #2452d1;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.hero h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 70px;
+    margin: 25px 0;
+    line-height: 1;
+}
+
+.hero p {
+    font-family: 'Inter', sans-serif;
+    width: 55%;
+    margin: auto;
+    font-size: 20px;
+    color: #818080;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.primary {
+    font-family: 'Inter', sans-serif;
+    background: #074e27;
+    color: white;
+}
+.primary:hover {
+    background: #0b8041; /* Darker green shade */
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.secondary {
+    font-family: 'Inter', sans-serif;
+    background: white;
+    border: 1px solid #ccc;
+}
+.secondary:hover {
+    background: #074e27; /* Darker green shade */
+    color:white;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.primary,
+.secondary {
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 8px;
+}
+
+/* SUBHEAD */
+.hero h3 {
+    font-family: 'Inter', sans-serif;
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+.hero .sub {
+    color: #777;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 40%;
+    margin: auto;
+}
+
+/* FEATURES GRID */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 30px;
+    padding: 5px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Feature Card */
+.feature {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #f0f0f0;
+}
+
+/* Hover effect like the image */
+.feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon Placeholder */
+.feature::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-color: #e8f5e9; /* Light green circle background */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Heading */
+.feature h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #222;
+    font-weight: 600;
+}
+
+/* Description */
+.feature p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* TAILORED SECTION */
+/* Section alignment */
+.tailored {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Heading */
+.tailored h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Subtitle */
+.tailored p {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Cards Grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Card */
+.card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    border: 2px solid #c6e7c6; /* light green border like image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Titles */
+.card h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Sub heading */
+.card > p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Bullet points */
+.card ul {
+    text-align: left;
+    color: #777;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* Button */
+.card button {
+    width: 100%;
+    padding: 12px 0;
+    background: #2b7a2f; /* green like screenshot */
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Button hover */
+.card button:hover {
+    background: #256a28;
+}
+
+
+/* CTA */
+/* CTA Section */
+.cta {
+    background: #0ea044;        /* same green as screenshot */
+    padding: 70px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.cta h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #e8fce8;
+}
+
+/* Button Row */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Primary Button (White background + green text) */
+.cta-buttons .primary {
+    background: #ffffff;
+    color: #197b2d;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Secondary Button (Transparent + white border) */
+.cta-buttons .secondary {
+    background: transparent;
+    border: 2px solid #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    color: #fcf5f5;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cta-buttons .primary:hover {
+    opacity: 0.85;
+    background-color: rgb(255, 255, 255);
+    color:#197b2d;
+}
+
+.cta-buttons .secondary:hover {
+    opacity: 0.85;
+    background-color: rgb(255, 255, 255);
+    color:#197b2d;
+}
+
+
+/* FOOTER */
+footer {
+    background: transparent;
+    padding: 60px 40px 20px;
+}
+
+/* Footer sections layout */
+.footer-sections {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* LOGO block */
+.logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.logo-box {
+    width: 38px;
+    height: 38px;
+    background: #0ea044;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.logo strong {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    margin-top: 6px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* Column headings */
+.footer-sections h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* Links */
+.footer-sections a {
+    display: block;
+    text-decoration: none;
+    color: #666;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.footer-sections a:hover {
+    color: #0ea044;
+}
+
+/* Copyright */
+.copy {
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
+}
